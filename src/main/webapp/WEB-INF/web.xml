@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
 <!--  <servlet>-->
 <!--    <servlet-name>HelloServlet</servlet-name>-->
-<!--    <servlet-class>com.siit.HelloServlet</servlet-class>-->
+<!--    <servlet-class>com.siit.studentRepoExample.GetStudentsServlet</servlet-class>-->
 <!--  </servlet>-->
 
 <!--  <servlet-mapping>-->
