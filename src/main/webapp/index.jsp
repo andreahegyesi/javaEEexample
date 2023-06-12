@@ -22,18 +22,15 @@
             <th>Name</th>
             <th>Email</th>
         </tr>
-        <%
-       //     JdbcStudentRepository repository = new JdbcStudentRepository();
-            JpaStudentRepository repository = new JpaStudentRepository();
-            List<Student> students = repository.getAllStudents();
-            for (Student student : students) {
-        %>
-            <tr>
-                <td><%= student.getId() %></td>
-                <td><%= student.getName() %></td>
-                <td><%= student.getEmail() %></td>
-            </tr>
-        <% } %>
+  <% JpaStudentRepository repository = new JpaStudentRepository();
+      List<Student> students = repository.getAllStudents();
+       for (Student student : students) { %>
+                  <tr>
+                      <td><%= student.getId() %></td>
+                      <td><%= student.getName() %></td>
+                      <td><%= student.getEmail() %></td>
+                  </tr>
+              <% } %>
     </table>
 
 <br/>
@@ -51,6 +48,27 @@
     <br/>
     <input type="submit" value="Add student" class="btn btn-primary btn-block"/>
     </form>
+
+</body>
+<h1>Find a student by name</h1>
+
+    <form action="findStudentByName.jsp">
+        <div class="form-outline mb-4">
+            <input type="text" name="nameToFind" value="Name to find..." onclick="this.value=''"/><br/>
+        </div>
+    <br/>
+    <input type="submit" value="Find student" class="btn btn-primary btn-block"/>
+    </form>
+
+    <h1>Find a student by Id</h1>
+
+        <form action="findStudentById.jsp">
+            <div class="form-outline mb-4">
+                <input type="number" name="idToFind" value="Id to find..." onclick="this.value=''"/><br/>
+            </div>
+        <br/>
+        <input type="submit" value="Find student" class="btn btn-primary btn-block"/>
+        </form>
 
 </body>
 </html>

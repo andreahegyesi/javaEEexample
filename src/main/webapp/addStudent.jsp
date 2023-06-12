@@ -1,5 +1,5 @@
 
-<%@ page import="com.siit.studentRepoExample.Student, com.siit.studentRepoExample.JdbcStudentRepository" %>
+<%@ page import="com.siit.studentRepoExample.Student, com.siit.studentRepoExample.JpaStudentRepository" %>
 
 <%
   String name = request.getParameter("name");
@@ -7,10 +7,9 @@
 
   Student student = new Student(name, email);
 
-  JdbcStudentRepository studentRepo = new JdbcStudentRepository();
-
+  JpaStudentRepository studentRepo = new JpaStudentRepository();
   studentRepo.addStudent(student);
 
 %>
 
-  <meta http-equiv="Refresh" content="0; url='/world" />
+  <meta http-equiv="Refresh" content="0; url='/persistanceExample" />
